@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  }
+
+  .card-header {
+    @apply flex items-center justify-between mb-4;
+  }
+
+  .card-title {
+    @apply text-lg font-semibold text-gray-900;
+  }
+
+  .card-subtitle {
+    @apply text-sm text-gray-500;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700;
+  }
+
+  .btn-secondary {
+    @apply btn bg-gray-200 text-gray-900 hover:bg-gray-300;
+  }
+
+  .btn-success {
+    @apply btn bg-green-600 text-white hover:bg-green-700;
+  }
+
+  .btn-warning {
+    @apply btn bg-yellow-600 text-white hover:bg-yellow-700;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .btn-blue {
+    @apply btn bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .btn-green {
+    @apply btn bg-green-600 text-white hover:bg-green-700;
+  }
+
+  .btn-yellow {
+    @apply btn bg-yellow-600 text-white hover:bg-yellow-700;
+  }
+
+  .btn-sm {
+    @apply h-8 px-3 text-xs;
+  }
+
+  .btn-md {
+    @apply h-10 px-4 py-2;
+  }
+
+  .btn-lg {
+    @apply h-11 px-8;
+  }
+
+  .status-indicator {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .status-stable {
+    @apply status-indicator bg-green-100 text-green-800;
+  }
+
+  .status-critical {
+    @apply status-indicator bg-red-100 text-red-800;
+  }
+
+  .status-recovering {
+    @apply status-indicator bg-yellow-100 text-yellow-800;
+  }
+
+  .status-observation {
+    @apply status-indicator bg-blue-100 text-blue-800;
+  }
+
+  .vital-card {
+    @apply bg-white rounded-lg border border-gray-200 p-4 transition-all duration-200;
+  }
+
+  .vital-card:hover {
+    @apply shadow-md border-gray-300;
+  }
+
+  .vital-value {
+    @apply text-2xl font-bold text-gray-900;
+  }
+
+  .vital-label {
+    @apply text-sm text-gray-500 font-medium;
+  }
+
+  .vital-unit {
+    @apply text-sm text-gray-400 ml-1;
+  }
+
+  .performance-metric {
+    @apply flex flex-col space-y-1;
+  }
+
+  .performance-metric-value {
+    @apply text-xl font-semibold text-gray-900;
+  }
+
+  .performance-metric-label {
+    @apply text-xs text-gray-500 uppercase tracking-wide;
+  }
+
+  /* 컴팩트 환자 카드 스타일 */
+  .patient-card-compact {
+    @apply bg-white rounded border border-gray-200 p-1.5 hover:shadow-sm transition-shadow;
+  }
+
+  .vital-card-compact {
+    @apply bg-gray-50 border border-gray-200 rounded p-1 text-center;
+  }
+
+  .vital-value-compact {
+    @apply text-[9px] font-medium text-gray-900;
+  }
+
+  .vital-label-compact {
+    @apply text-[8px] text-gray-600;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.10);
+  }
+
+  .animate-pulse-custom {
+    animation: pulse-custom 2s infinite;
+  }
+
+  @keyframes pulse-custom {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+} 

@@ -1,0 +1,19 @@
+{
+  "name": "delta-test",
+  "version": "1.0.0",
+  "description": "병원 환자 모니터링 시스템 WebSocket Delta Update 성능 측정 프로젝트",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "install:all": "npm install && npm install --prefix frontend && npm install --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 
