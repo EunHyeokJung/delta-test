@@ -255,7 +255,7 @@ wsService.on('delta_update', (data) => {
 ### 1. 프로젝트 설정
 ```bash
 # 프로젝트 클론
-git clone <repository-url>
+git clone https://github.com/EunHyeokJung/delta-test.git
 cd delta-test
 
 # 루트에서 모든 의존성 설치
